@@ -1,0 +1,104 @@
+.center.data-v-a556d8be {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-top.data-v-a556d8be {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-top-start.data-v-a556d8be {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.flex-left.data-v-a556d8be {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#page-fade-enter-active.data-v-a556d8be,
+.page-fade-leave-active.data-v-a556d8be {
+  transition: opacity 2s;
+}
+.page-fade-enter.data-v-a556d8be,
+.page-fade-leave-to.data-v-a556d8be {
+  opacity: 0;
+}
+.fade-enter-active.data-v-a556d8be,
+.fade-leave-active.data-v-a556d8be {
+  transition: opacity 0.5s;
+}
+.fade-enter.data-v-a556d8be,
+.fade-leave-to.data-v-a556d8be {
+  opacity: 0;
+}
+.Cart.data-v-a556d8be {
+  z-index: 11;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Cart .use.data-v-a556d8be {
+  width: 60%;
+  height: 35%;
+  border-radius: 2em;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+.Cart .use > ._span.data-v-a556d8be:nth-child(1) {
+  position: absolute;
+  top: 26%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #FCFA68;
+  z-index: 12;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /* 设置蒙版的颜色为金黄色 */
+}
+.Cart .use image.data-v-a556d8be {
+  display: block;
+  width: 100%;
+  border-bottom: 1rpx solid #cccccc;
+  height: 50%;
+}
+.Cart .use .use_cart.data-v-a556d8be {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+}
+.Cart .use .use_cart .bt.data-v-a556d8be {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+.Cart .use .use_cart button.data-v-a556d8be {
+  width: 50%;
+  background: #F63F18;
+  color: #FFFFFF;
+  border-radius: 1em;
+  margin-top: 0.8em;
+}
+.Cart .use .use_cart ._p.data-v-a556d8be {
+  width: 100%;
+  text-align: center;
+  font-size: 0.6em;
+  margin-bottom: 0.1em;
+}
+

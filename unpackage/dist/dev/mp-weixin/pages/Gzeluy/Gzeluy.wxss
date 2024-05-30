@@ -1,0 +1,125 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-top-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.flex-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 2s;
+}
+.page-fade-enter,
+.page-fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.Huogui {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+}
+.Huogui > image:nth-child(1) {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateX(-1%);
+          transform: translateX(-1%);
+  height: 100%;
+  z-index: 7;
+}
+.Huogui .useimg {
+  position: absolute;
+  z-index: 8;
+  width: 2em;
+  top: 35%;
+  right: 0%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.Huogui .use {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-x: auto;
+  display: block;
+  width: 80%;
+  background: #BEDCEF;
+  color: #FFFFFf;
+  position: absolute;
+  z-index: 8;
+  height: 30vh;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.Huogui .use view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Huogui .use .top view {
+  padding: 0.4em 0em;
+  border-bottom: 1rpx solid #CCCCCC;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Huogui .use .th {
+  color: #096F9A;
+  font-size: 0.2em;
+}
+.Huogui .use .th view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Huogui .use .tr {
+  border-bottom: 1rpx solid #CCCCCC;
+  font-size: 0.2em;
+  color: #096F9A;
+}
+.Huogui .use .tr view {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ys {
+  background: #096F9A;
+  color: #FFFFFf;
+}
+.ys2 {
+  color: #096F9A;
+}
+

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "xup": "/components/Xup",
+    "sru": "/components/Sru",
+    "imgs": "/components/Imgs",
+    "fhcj": "/components/Fhcj",
+    "jp-cart": "/components/JpCart"
+  }
+}

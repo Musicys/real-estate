@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/hdgh/hdgh",
+    "pages/Gzeluy/Gzeluy",
+    "pages/LxCart/LxCart"
+  ],
+  "subPackages": [],
+  "window": {
+    "transition": {
+      "name": "fade",
+      "duration": 300
+    }
+  },
+  "usingComponents": {}
+}

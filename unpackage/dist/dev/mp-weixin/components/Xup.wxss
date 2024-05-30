@@ -1,0 +1,13 @@
+.ysone.data-v-b34b42f0 {
+  position: fixed;
+  z-index: 12;
+  width: 4em;
+  bottom: 45vh;
+  right: 0;
+  height: 4em;
+}
+.ysone image.data-v-b34b42f0 {
+  width: 100%;
+  border-radius: 1em;
+}
+

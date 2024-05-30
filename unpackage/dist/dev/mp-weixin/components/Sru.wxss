@@ -1,0 +1,104 @@
+.center.data-v-cdf9bc2a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-top.data-v-cdf9bc2a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-top-start.data-v-cdf9bc2a {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.flex-left.data-v-cdf9bc2a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#page-fade-enter-active.data-v-cdf9bc2a,
+.page-fade-leave-active.data-v-cdf9bc2a {
+  transition: opacity 2s;
+}
+.page-fade-enter.data-v-cdf9bc2a,
+.page-fade-leave-to.data-v-cdf9bc2a {
+  opacity: 0;
+}
+.fade-enter-active.data-v-cdf9bc2a,
+.fade-leave-active.data-v-cdf9bc2a {
+  transition: opacity 0.5s;
+}
+.fade-enter.data-v-cdf9bc2a,
+.fade-leave-to.data-v-cdf9bc2a {
+  opacity: 0;
+}
+.Sru.data-v-cdf9bc2a {
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Sru .shuruk.data-v-cdf9bc2a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+  position: relative;
+}
+.Sru .shuruk .bj.data-v-cdf9bc2a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Sru .shuruk .fromuse.data-v-cdf9bc2a {
+  z-index: 2;
+  width: 50%;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1.2em;
+}
+.Sru .shuruk .fromuse .useimg.data-v-cdf9bc2a {
+  width: 2em;
+  position: absolute;
+  bottom: -1em;
+}
+.Sru .shuruk .fromuse input.data-v-cdf9bc2a {
+  display: block;
+  font-size: 0.6em;
+  width: 60%;
+  text-align: center;
+  color: #C6BCBC;
+  background: #F4F2EE;
+  padding: 0.2em;
+  border-radius: 2em;
+}
+.Sru .shuruk .fromuse button.data-v-cdf9bc2a {
+  background: #0660CC;
+  color: #FFFFFF;
+  height: 2em;
+  border-radius: 2em;
+  width: 80%;
+  font-size: 0.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input.data-v-cdf9bc2a,
+button.data-v-cdf9bc2a {
+  margin-bottom: 10px;
+}
+

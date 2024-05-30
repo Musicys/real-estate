@@ -1,0 +1,38 @@
+.Huogui {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+}
+.Huogui > image:nth-child(1) {
+  top: 0;
+  position: absolute;
+  width: 110%;
+  -webkit-transform: translateX(-1%);
+          transform: translateX(-1%);
+  height: 100%;
+  z-index: 7;
+}
+.Huogui .useimg {
+  position: absolute;
+  z-index: 8;
+  width: 2em;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.Huogui ._span {
+  overflow-x: auto;
+  display: block;
+  width: 90%;
+  color: #FFFFFf;
+  position: absolute;
+  z-index: 8;
+  height: 50vh;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+

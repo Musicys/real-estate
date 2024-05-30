@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fhcj": "/components/Fhcj",
+    "xup": "/components/Xup"
+  }
+}

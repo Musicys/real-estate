@@ -1,5 +1,5 @@
 export default{
-baseUrl:"http://djlmy.top:8080",
+baseUrl:"http://fangdichan.djlmy.top:8080",
 data:{},method:'GET',
 header: {'Content-Type': 'application/json'},
 dataType:'json',
@@ -21,11 +21,7 @@ console.log(result);
 if(data.code===500)
 {
 	// console.log('123');
-uni.showToast({
-  title: data.msg,
-  icon: 'none',
-  duration: 2000
-});
+
 }
 res(data)
 }})})}}

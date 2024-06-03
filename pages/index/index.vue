@@ -300,15 +300,7 @@
 				// console.log('跳转',window.location.href);
 					uni.setStorageSync('code', '200');
 					
-					const appId = "wx7c2eb41912ca37c1"; // 替换为你的应用的AppID
-					
-					const redirectUri =window.location.href // 替换为你的授权后重定向的链接
-					const scope = 'snsapi_userinfo'; // 替换为你的授权作用域
-					const state = "codseuse"; // 替换为自定义的参数，可用于状态标记等
-					
-					const authUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}&state=${state}#wechat_redirect`;
-					
-					window.location.href = authUrl;
+				
 					
 			},
 			setphone(){
@@ -739,6 +731,9 @@
 							this.my.useravator=this.usedata.ym+this.usedata.useravator
 							this.usetime.sateatime=this.usedata.activitystarttime
 							this.usetime.endtime=this.usedata.activityendtime
+							
+							
+								console.log("错误shij",this.usedata);
 							
 						}
 						catch(e)

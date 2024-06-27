@@ -101,9 +101,17 @@
 			
 		},
 		created(){
+		
 			this.setdata()
 			this.setjlarr()
-		}
+		},
+		onShow: function() {
+			uni.setNavigationBarTitle({
+				title: '我的奖品'
+			});
+		
+		},
+		
 	}
 </script>
 

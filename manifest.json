@@ -13,15 +13,16 @@
         "sdkConfigs" : {
             "maps" : {
                 "amap" : {
-                    "key" : "875012671a54a9b55fa42ac36e348eea",
-                    "securityJsCode" : "1151e7218fb7341ce6bb647e6c0a0bf4",
-                    "serviceHost" : "1151e7218fb7341ce6bb647e6c0a0bf4"
+                    "key" : "c1a233d8795fd949268cfcf81c4a237c",
+                    "securityJsCode" : "f74b772659682a3e405a1ac5c29ee34e",
+                    "serviceHost" : "f74b772659682a3e405a1ac5c29ee34e"
                 }
             }
         },
         "router" : {
             "mode" : "history"
-        }
+        },
+        "title" : "凤凰网房地产抽奖"
     },
     /* 5+App特有相关 */
     "app-plus" : {

@@ -1,7 +1,7 @@
 <template>
 	<view class="Sru">
 		<view class="shuruk">
-			<image src="/static/choujiang.png" mode="widthFix" class="bj"></image>
+			<image src="/static/choujiang.png"   class="bj"></image>
 			  <view class="fromuse">
 				  
 			      <input type="text" v-model="name" placeholder="请输入名称" />
@@ -78,6 +78,7 @@
 					fdcAccount:getApp().urlnber
 				}
 			}).then(res=>{
+				console.log("提交信息",res);
 				uni.setStorageSync('user', str)
 				uni.showToast({
 				  title: '提交成功',
@@ -132,7 +133,9 @@
 			
 			this.name=JSON.parse(uni.getStorageSync('user')).fdcName
 			this.nuber=JSON.parse(uni.getStorageSync('user')).fdcPhone
+			
 		}
+		
 	}
 		},
 	
@@ -158,12 +161,15 @@
 		
 			 .center();
 		
-		width: 80%;
-		height: 70%;
+		width: 100%;
+		height: 100%;
+		
 		.bj{
 			position: absolute;
-			width: 100%;
+			width: 95%;
+			
 			height: 100%;
+			top: -10vh;
 		}
 		position: relative;
 		 .fromuse{
@@ -171,12 +177,14 @@
 			 width: 50%;
 			 display: block;
 			 .flex-top();
+		
 			 margin-top: -1.2em;
 			
 		 .useimg{
 			 width: 2em;
 			 position: absolute;
-			 bottom: -1em;
+			 
+			 bottom: 0em;
 		 }
 			
 			

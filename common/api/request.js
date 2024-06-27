@@ -1,5 +1,5 @@
 export default{
-baseUrl:"http://fangdichan.djlmy.top:8080",
+baseUrl:"https://fangdichan.djlmy.top:8082",
 data:{},method:'GET',
 header: {'Content-Type': 'application/json'},
 dataType:'json',

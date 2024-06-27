@@ -201,9 +201,21 @@
 			// 
 			
 		},
+		
 		created(){
-			this.setdata()
-		}
+			
+		},
+		onShow: function() {
+				
+				 this.setdata()
+			
+		},
+		onShow: function() {
+			uni.setNavigationBarTitle({
+				title: '抽奖信息'
+			});
+		
+		},
 	}
 </script>
 

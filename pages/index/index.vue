@@ -18,7 +18,7 @@
 
 <!-- 三图片 -->
 
-<Xup @click.native='goxcx'></Xup>
+<!-- <Xup @click.native='goxcx'></Xup> -->
 
  <transition name="fade">
 
@@ -33,13 +33,13 @@
 	<image src="https://img.woniutaofang.com/tjyun/ed3e38b9822b45b5bc0709216b251802.png" mode="widthFix" @click="goguiz()"></image>
 </view>
 <!-- 聊一聊 -->
-
+<!-- 
 <view class="liaooneliao" @click="goIQQ">
 	<image :src="my.useravator" mode="widthFix"></image>
 	<view>
 		聊一聊
 	</view>
-</view>
+</view> -->
 
 
 
@@ -116,9 +116,15 @@
 		
 		</swiper>
 		
-		<view class="topbutone" @click="Issur()">
-			<image src="https://img.woniutaofang.com/tjyun/39a839bbf1554c09aa33ffe52d8ba6af.png" mode="widthFix"></image>
-		</view>
+	
+		
+		
+		
+		
+		
+		
+		
+		
 		</view>
 		
 		<view class="but">
@@ -319,7 +325,10 @@
 						  "fdcPhone":JSON.parse(uni.getStorageSync('user')).fdcPhone
 					}
 				}).then(res=>{
-					console.log('1111',);
+					console.log('1111',{
+						  "fdcAccount":getApp().urlnber,
+						  "fdcPhone":JSON.parse(uni.getStorageSync('user')).fdcPhone
+					});
 					if(typeof res=='number')
 					{
 						if(res<=0)
@@ -516,40 +525,22 @@
 						this.sethjdata()//更新抽奖次数
 					}
 					else{
-						return   uni.showToast({
-			      	title: '抽奖失败',
-			      	duration: 2000,
-					icon:"none"
-			      });
+					this.jl=this.cjarr[index]
+					this.jl.ym=this.usedata.ym
+					this.setIsjl()
+					this.setnbercishu()//抽奖更新次数
+					this.sethjdata()//更新抽奖次数
 					}
 				})
 				
 			},
 			goxcx(){
+				
 				if(this.usedata.xiaochengxv)
 				{
-					let arr=this.usedata.xiaochengxv.split(',')
-					console.log(arr)
-					uni.navigateToMiniProgram({
-					       appId: arr[0],
-					       path: arr[1],
-					       success(res) {
-					         // 跳转成功的回调函数
-					         uni.showToast({
-					         title: '跳转种',
-					         duration: 2000,
-					         icon:"none",
-							 })
-					       },
-					       fail(err) {
-					         // 跳转失败的回调函数
-							 uni.showToast({
-							 title: '跳转失败',
-							 duration: 2000,
-							 icon:"none",
-							 })
-					       }
-					     })
+					let arr=this.usedata.xiaochengxv
+					console.log("跳转",arr)
+					location.href=arr
 				}
 			
 				
@@ -624,16 +615,19 @@
 					switch(x)
 					{
 						  case 1:
-						  this.imgurl=this.usedata.ym+this.usedata.realityimg
+						  	  // this.imgurl=this.usedata.ym+this.usedata.roombackground
+						  this.imgurl=this.usedata.ym+this.usedata.viewimg
 						    // 当 expression 等于 value1 时执行的代码块
 						    break;
 						  case 2:
-						  this.imgurl=this.usedata.ym+this.usedata.roombackground
+						this.imgurl=this.usedata.ym+this.usedata.roomimg
 						    // 当 expression 等于 value2 时执行的代码块
 						    break;
 						  case 3:
 						    // 当 expression 等于 value3 时执行的代码块
-							this.imgurl=this.usedata.ym+this.usedata.roomimg
+							
+						
+								  this.imgurl=this.usedata.ym+this.usedata.realityimg
 						    break;
 						
 					}
@@ -681,22 +675,49 @@
 				});
 			},
 			goditu(){
+		// uni.openLocation({
+		//         // 目标位置的经纬度
+		//         latitude: 23.134424,
+		//         longitude: 113.314286,
+		//         // 目标位置的名称
+		//         name: '广州市珠江新城',
+		//         // 目标位置的详细地址
+		//         address: '广东省广州市天河区珠江新城香江广场',
+		//         // 地图缩放比例
+		//         scale: 18,
+		//         // 调用成功时的回调函数
+		//         success: function(res) {
+		//           console.log('调用成功：', res)
+		//         },
+		//         // 调用失败时的回调函数
+		//         fail: function(res) {
+		//           console.log('调用失败：', res)
+		//         },
+		//         // 调用完成时的回调函数
+		//         complete: function(res) {
+		//           console.log('调用完成：', res)
+		//         }
+		//       })
+		
+		
 				if(this.usedata.location)
 				{
 					let a=this.usedata.location.split(',')
 			
 					uni.openLocation({
-					  latitude: Number(a[2]),  
-					  longitude: Number(a[3]), 
+					  latitude:parseFloat(a[3]),  
+					  longitude: parseFloat(a[2]), 
 					  name: a[0], 
 					  address: a[1], 
 					  scale: 18  
 					});
+					console.log("经纬度",parseFloat(a[2]),parseFloat(a[3]));
+					
 				}
 				else{
 					uni.openLocation({
-					  latitude: 23.107383,  
-					  longitude: 113.277321, 
+					  latitude: 32.046047 ,  
+					  longitude:32.046047 ,  
 					  name: '广州塔', 
 					  address: '广东省广州市海珠区', 
 					  scale: 18  
@@ -725,15 +746,20 @@
 						try{
 							this.my.voidurl=this.usedata.ym+this.usedata.video
 							this.my.mp3url=this.usedata.ym+this.usedata.mp3
-							this.my.jlurl=this.usedata.ym+this.usedata.viewimg
+							this.my.jlurl=this.usedata.ym+this.usedata.roombackground
 							this.my.gifimg=this.usedata.ym+this.usedata.gifimg
 							this.my.activitytimeimg=this.usedata.ym+this.usedata.activitytimeimg
 							this.my.useravator=this.usedata.ym+this.usedata.useravator
-							this.usetime.sateatime=this.usedata.activitystarttime
-							this.usetime.endtime=this.usedata.activityendtime
+								console.log("活动时间",this.usedata.activityendtime);
 							
+							if(this.usedata.activitystarttime!=undefined&&this.usedata.activityendtime!=undefined)
+							{
+								this.usetime.sateatime=this.usedata.activitystarttime
+								this.usetime.endtime=this.usedata.activityendtime
 							
-								console.log("错误shij",this.usedata);
+							}
+							
+								
 							
 						}
 						catch(e)
@@ -758,7 +784,12 @@
 				}).then(res=>{
 					console.log('抽奖数据',res.rows)
 					this.cjarr=res.rows
-						
+					if(this.usetime.sateatime==""&&this.usetime.endtime=="")
+							{
+							this.usetime.endtime=res.rows[0].fdcEndtime
+									this.usetime.sateatime=res.rows[0].fdcStarttime
+									console.log("活动时间",this.usetime);
+							}
 					
 					
 				})
@@ -794,12 +825,19 @@
 			   }
 		},
 		created() {
+			
 		this.setdata()
 		this.music = uni.createInnerAudioContext();//初始化
 		this.sethjdata()
 		this.setnbercishu()
 		
 	
+		  },
+		  onShow: function() {
+		  	uni.setNavigationBarTitle({
+		  		title: '凤凰网房地产抽奖'
+		  	});
+		  	console.log('App Show')
 		  },
 		
 	}

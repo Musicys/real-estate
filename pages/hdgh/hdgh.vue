@@ -1,7 +1,7 @@
 <template>
 	<view class="Huogui">
 		<image :src="backurl" ></image>
-		<span>
+		<!-- <span>
 			<p>抽奖时间：2023年8月24日-2023年9月3日</p>
 			<p>领奖时间：2023年8月25日-2023年9月3日</p>
 			<p>                （ 上午9:00-11:30；下午3:00-6:00）</p>
@@ -15,7 +15,7 @@
 			<p>5、线下领奖开始时间为2023年8月25日，所中奖品48小时之内未领取则失效，奖品数量有限
 			，先到先得，发完即止。</p>
 			<p>6、本活动法律范围内的解释权归中铁房地产集团武汉有限公司所有。</p>
-		</span>
+		</span> -->
 		<image src="https://img.woniutaofang.com/tjyun/c80aaeba665c4a78bf26a8dbe3ff40c3.png" mode="widthFix" class="useimg" @click="goback()"></image>
 	</view>
 </template>
@@ -50,8 +50,16 @@
 			
 		},
 		created(){
+			
 			this.setdata()
-		}
+		},
+		onShow: function() {
+			uni.setNavigationBarTitle({
+				title: '抽奖规则'
+			});
+		
+		},
+		
 	}
 </script>
 
@@ -76,7 +84,7 @@
 		z-index: 8;
 		width: 2em;
 		
-		top: 70%;
+		top: 90%;
 		left: 50%;
 		 transform: translate(-50%, -50%);
 	}
